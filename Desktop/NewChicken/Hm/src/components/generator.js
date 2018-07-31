@@ -5,47 +5,43 @@ class Generator extends Component {
 
   constructor() {
     super();
+ 
+
     this.state = {
-      count: 0
+      chickCount: 0
     };
-    this.tap = this.tap.bind(this);
-    // this.clicks = document.getElementById("clickNum");
+    this.click = this.click.bind(this);
 
   }
 
-    tap() {
-      this.setState({
-        count: ++this.state.count
-      })
-    }
+  click() {
+    var element = document.getElementById("mainChick");
+    element.classList.remove("size-norm");
+    element.classList.add("size-up");
+    setTimeout(this.expand, 30);
 
-    expand() {
-      var element = document.getElementById("mainChick");
-      element.classList.remove("size-up");
-      element.classList.add("size-norm");
-    }
+    this.setState({
+      chickCount: ++this.state.chickCount
+    })
+  }
 
-    Click() {
-      // var element = document.getElementById("mainChick");
-      // element.classList.remove("size-norm");
-      // element.classList.add("size-up");
-      // setTimeout(expand, 30);
-      // this.count += 1;
-      // clicks.innerHTML = "Clicks: " + this.count;
+  expand() {
+    this.element = document.getElementById("mainChick");
+    element.classList.remove("size-up");
+    element.classList.add("size-norm");
+  }
 
-    }
 
-    
 
 
   render() {
     return (
       <div>
-        <p>This button was clicked { this.state.count } times!</p>
+        <p id="clickNum">You currently have {this.state.chickCount} chickens</p>
         <img id="mainChick"
-        class="size-norm"
-        onClick={ this.tap } 
-        src={chick} />
+          class="size-norm"
+          onClick={this.click}
+          src={chick} />
       </div>
     )
   }

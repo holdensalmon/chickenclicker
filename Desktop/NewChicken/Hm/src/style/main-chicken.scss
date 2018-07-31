@@ -14,6 +14,65 @@
 }
 
 #clickNum {
-    padding-top: 250px;
+    padding-top: 25px;
+    padding-left: 25px;
     color: black;
+
+//     background: linear-gradient(to right, orange , yellow, green, cyan, blue, violet);
+//   -webkit-background-clip: text;
+//   -webkit-text-fill-color: transparent;
+
+// background-image: -webkit-gradient( linear, left top, right top, color-stop(0, #f22), color-stop(.3, #f2f), color-stop(0.3, #22f), color-stop(.3, #2ff), color-stop(0.3, #2f2),color-stop(.3, #2f2), color-stop(0.3, #ff2), color-stop(.3, #f22) );
+//   background-image: gradient( linear, left top, right top, color-stop(0, #f22), color-stop(.3, #f2f), color-stop(0.3, #22f), color-stop(.3, #2ff), color-stop(0.3, #2f2),color-stop(.3, #2f2), color-stop(0.3, #ff2), color-stop(.3, #f22) );
+//   color:transparent;
+//   -webkit-background-clip: text;
+//   background-clip: text;
+
 }
+
+#clickNum {
+    /* Chrome, Safari, Opera */
+   -webkit-animation: rainbow 3s infinite; 
+   
+   /* Internet Explorer */
+   -ms-animation: rainbow 3s infinite;
+   
+   /* Standar Syntax */
+   animation: rainbow 3s infinite; 
+ }
+ 
+ /* Chrome, Safari, Opera */
+ @-webkit-keyframes rainbow{
+   0%{color: orange;}	
+   10%{color: purple;}	
+     20%{color: red;}
+     40%{color: yellow;}
+     60%{color: green;}
+     100%{color: blue;}
+     100%{color: orange;}	
+ }
+ /* Internet Explorer */
+ @-ms-keyframes rainbow{
+   0%{color: orange;}	
+   10%{color: purple;}	
+     20%{color: red;}
+     40%{color: yellow;}
+     60%{color: green;}
+     100%{color: blue;}
+     100%{color: orange;}	
+ }
+ 
+ /* Standar Syntax */
+ @keyframes rainbow{
+   0%{color: orange;}	
+   10%{color: purple;}	
+     20%{color: red;}
+     40%{color: yellow;}
+     60%{color: green;}
+     100%{color: blue;}
+     100%{color: orange;}
+ }
+ 
+ body{
+   background-image: url(http://fjordstudio.dk/assets/img/bg/diamonds.png);
+ }
