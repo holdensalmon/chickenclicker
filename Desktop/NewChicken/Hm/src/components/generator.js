@@ -18,15 +18,17 @@ class Generator extends Component {
     var element = document.getElementById("mainChick");
     element.classList.remove("size-norm");
     element.classList.add("size-up");
-    setTimeout(this.expand, 30);
+    setTimeout(this.shrink, 30);
+    console.log("hello1");
 
     this.setState({
       chickCount: ++this.state.chickCount
     })
+
   }
 
-  expand() {
-    this.element = document.getElementById("mainChick");
+  shrink() {
+    var element = document.getElementById("mainChick");
     element.classList.remove("size-up");
     element.classList.add("size-norm");
   }
@@ -39,7 +41,7 @@ class Generator extends Component {
       <div>
         <p id="clickNum">You currently have {this.state.chickCount} chickens</p>
         <img id="mainChick"
-          class="size-norm"
+          className="size-norm"
           onClick={this.click}
           src={chick} />
       </div>
