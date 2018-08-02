@@ -9,6 +9,9 @@ const proxyRules = require('../proxy/rules');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const DefinePlugin = require('webpack/lib/DefinePlugin');
 const HotModuleReplacementPlugin = require('webpack/lib/HotModuleReplacementPlugin');
+const totalCount = 0;
+const lvlOne = 1;
+
 
 module.exports = webpackMerge(webpackCommon, {
 
@@ -68,7 +71,13 @@ module.exports = webpackMerge(webpackCommon, {
       template: path.resolve(__dirname, '../static/index.html'),
       favicon: path.resolve(__dirname, '../static/favicon.ico')
     }),
-    new HotModuleReplacementPlugin()
+    new HotModuleReplacementPlugin(),
+    new webpackCommon.DefinePlugin({
+      totalCount,
+    }),
+    new webpackCommon.DefinePlugin({
+      lvlOne,
+    }),
   ],
 
   devServer: {
