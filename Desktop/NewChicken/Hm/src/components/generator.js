@@ -11,10 +11,11 @@ class Generator extends Component {
     super();
 
     this.state = {
-      chickCount: 0
+      chickCount: 0,
+      eggCount: 0
     };
+
     this.click = this.click.bind(this);
-    this.buy1 = this.buy1.bind(this);
     this.eggClick = this.eggClick.bind(this);
 
   }
@@ -27,12 +28,6 @@ class Generator extends Component {
     element.classList.add("size-up");
     setTimeout(this.shrink, 30);
     console.log("hello1");
-
-    // var chickCount = 1;
-    // var chickCountEl = document.getElementById("chickCount");
-
-    // chickCount++;
-    // chickCountEl.value = chickCount;
 
     this.setState({
       chickCount: ++this.state.chickCount
@@ -55,39 +50,29 @@ class Generator extends Component {
 
     console.log("hello2");
 
-    if (this.state.chickCount > 5) {
+    if (this.state.chickCount >= 20) {
       this.setState({
-        chickCount: --this.state.chickCount
+        chickCount: this.state.chickCount - 20
+      })
+      this.setState({
+        eggCount: ++this.state.eggCount
       })
     }
 
-}
+  }
 
-eggTurn() {
+  eggTurn() {
     var element = document.getElementById("egg");
     element.classList.remove("egg-up");
     element.classList.add("egg-norm");
-}
-
-  buy1() {
-
-
-
-    // if (chickCount > 5) {
-    //   chickCount--;
-    //   chickCountEl.value = chickCount;
-    // }  
-
   }
-
-
-
 
   render() {
 
     return (
       <div>
-        <p id="clickNum">You currently have {this.state.chickCount} chickens</p>
+        <p id="clickNum">You currently have {this.state.chickCount} chickens</p>,
+        <p id="eggNum">You currently have {this.state.eggCount} eggs</p>
         <img id="mainChick"
           className="size-norm"
           onClick={this.click}

@@ -1,7 +1,9 @@
 
 #mainChick{
     // position: absolute;
-    
+    position: absolute;
+    top: 75px;
+    left: 20px;
 }
 
 .size-norm{
@@ -15,13 +17,13 @@
 }
 
 #clickNum {
-    padding-top: 25px;
-    padding-left: 25px;
+    position: absolute;
+    top: 45px;
+    left: 25px;
     color: black;
-
 }
 
-#clickNum {
+#clickNum, #eggNum  {
     /* Chrome, Safari, Opera */
    -webkit-animation: rainbow 3s infinite; 
    

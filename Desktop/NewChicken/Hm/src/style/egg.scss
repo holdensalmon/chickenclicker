@@ -1,10 +1,10 @@
 
 
-.main-body {
-    display: grid;
-    grid-template-columns: [left-s] 500px [left-e mid-s] 1fr [mid-e right-s] 500px [right-e];
-    grid-template-rows: repeat(10, 10vh);
-}
+// .main-body {
+//     display: grid;
+//     grid-template-columns: [left-s] 500px [left-e mid-s] 1fr [mid-e right-s] 500px [right-e];
+//     grid-template-rows: repeat(10, 10vh);
+// }
 
 #egg{
     // position: absolute;
@@ -40,5 +40,10 @@
 
     transform: rotate(360deg);
     -webkit-transform: rotate(360deg);
+}
 
+#eggNum {
+    position: absolute;
+    top: 45px;
+    right: 155px;
 }
