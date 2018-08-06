@@ -55,10 +55,12 @@ class Generator extends Component {
 
     console.log("hello2");
 
+    if (this.state.chickCount > 5) {
+      this.setState({
+        chickCount: --this.state.chickCount
+      })
+    }
 
-    this.setState({
-      chickCount: --this.state.chickCount
-    })
 }
 
 eggTurn() {
