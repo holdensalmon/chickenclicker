@@ -6,20 +6,20 @@ class Upgrade1 extends Component {
     constructor(props) {
         super(props);
 
-        this.click = this.click.bind(this);
+        this.eggClick = this.eggClick.bind(this);
     }
 
 
-    click() {
+    eggClick() {
         var element = document.getElementById("egg");
         element.classList.remove("egg-norm");
         element.classList.add("egg-up");
-        setTimeout(this.shrink, 30);
+        setTimeout(this.eggTurn, 30);
 
         console.log("hello2");
     }
 
-    shrink() {
+    eggTurn() {
         var element = document.getElementById("egg");
         element.classList.remove("egg-up");
         element.classList.add("egg-norm");
@@ -32,7 +32,7 @@ class Upgrade1 extends Component {
                 <img
                     id="egg"
                     className="egg-norm"
-                    onClick={this.click}
+                    onClick={this.eggClick}
                     src={egg}
                 />
             </div>

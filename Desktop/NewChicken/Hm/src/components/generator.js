@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import chick from './pics/chicken-sprite-main.png';
-// import Upgrade1 from './upgrade1';
+import egg from './pics/upgrade1.png';
+import Upgrade1 from './upgrade1';
+
 
 
 class Generator extends Component {
@@ -12,13 +14,10 @@ class Generator extends Component {
       chickCount: 0
     };
     this.click = this.click.bind(this);
-
+    this.buy1 = this.buy1.bind(this);
+    this.eggClick = this.eggClick.bind(this);
 
   }
-
-
-
-  
 
 
 
@@ -29,6 +28,11 @@ class Generator extends Component {
     setTimeout(this.shrink, 30);
     console.log("hello1");
 
+    // var chickCount = 1;
+    // var chickCountEl = document.getElementById("chickCount");
+
+    // chickCount++;
+    // chickCountEl.value = chickCount;
 
     this.setState({
       chickCount: ++this.state.chickCount
@@ -43,6 +47,38 @@ class Generator extends Component {
   }
 
 
+  eggClick() {
+    var element = document.getElementById("egg");
+    element.classList.remove("egg-norm");
+    element.classList.add("egg-up");
+    setTimeout(this.eggTurn, 30);
+
+    console.log("hello2");
+
+
+    this.setState({
+      chickCount: --this.state.chickCount
+    })
+}
+
+eggTurn() {
+    var element = document.getElementById("egg");
+    element.classList.remove("egg-up");
+    element.classList.add("egg-norm");
+}
+
+  buy1() {
+
+
+
+    // if (chickCount > 5) {
+    //   chickCount--;
+    //   chickCountEl.value = chickCount;
+    // }  
+
+  }
+
+
 
 
   render() {
@@ -53,7 +89,13 @@ class Generator extends Component {
         <img id="mainChick"
           className="size-norm"
           onClick={this.click}
-          src={chick} />
+          src={chick} />,
+        <img
+          id="egg"
+          className="egg-norm"
+          onClick={this.eggClick}
+          src={egg}
+        />,
       </div>
     )
   }

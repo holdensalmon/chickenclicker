@@ -9,7 +9,7 @@ class App extends Component {
     return (
       <div className="main-body">
         <Generator />
-        <Upgrade1 />
+        {/* <Upgrade1 /> */}
       </div>
 
     );
