@@ -2,8 +2,8 @@
 #mainChick{
     // position: absolute;
     position: absolute;
-    top: 75px;
-    left: 20px;
+    top: 105px;
+    left: 50px;
 }
 
 .size-norm{
@@ -19,11 +19,11 @@
 #clickNum {
     position: absolute;
     top: 45px;
-    left: 25px;
+    left: 55px;
     color: black;
 }
 
-#clickNum, #eggNum, #lampNum  {
+#clickNum, #eggNum, #lampNum, #mutantNum, #cps, #cpc  {
     /* Chrome, Safari, Opera */
    -webkit-animation: rainbow 3s infinite; 
    

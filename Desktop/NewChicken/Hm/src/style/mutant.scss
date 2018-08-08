@@ -6,33 +6,35 @@
 //     grid-template-rows: repeat(10, 10vh);
 // }
 
-#egg{
+#mutant{
     // position: absolute;
     // padding-left: 500px;
     position: absolute;
-    top: 75px;
-    right: 145px;
+    top: 360px;
+    right: 140px;
     overflow: hidden;
     transition-duration: 0.8s;
     transition-property: transform;
+
 }
 
-#egg:hover {
-    transform: rotate(30deg);
-    -webkit-transform: rotate(30deg);
+#mutant:hover {
+    transform: rotate(15deg);
+    -webkit-transform: rotate(15deg);
+
 }
 
-.egg-norm{
+.mutant-norm{
 
-    width: 200px;
-    height: 110px;
+    width: 240px;
+    height: 150px;
 }
 
-.egg-up {
+.mutant-up {
     transition: all 2s ease;
     // transform: scale(1.2);
-    width: 210px;
-    height: 100px;
+    width: 260px;
+    height: 170px;
 
     overflow: hidden;
     transition-duration: 0.8s;
@@ -42,10 +44,10 @@
     -webkit-transform: rotate(360deg);
 }
 
-#eggNum {
+#mutantNum {
     position: absolute;
-    top: 95px;
-    right: 355px;
+    top: 395px;
+    right: 385px;
 }
 
 #cpc {
